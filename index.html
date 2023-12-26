@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copiar textos</title>
+    <!--icones-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --azul-claro: #c9dfff;
+            --azul-escuro: #0a0a23;
+            --bg-cinza-claro: #dddddd;
+            --bg-cinza-escuro: #111213;
+            --bg-cinza-medio: #6c757d;
+            --cinza-escuro: #232526;
+            --bg-w3schools: #04aa6d;
+            --bg-celke: #3580c9;
+            --color-const: purple;
+            --color-class: #5392f9;
+            --color-echo: yellow;
+            --color-function: #7FFF00;
+            --color-varDump: #7FFF00;
+            --color-new: #7FFFD4;
+            --color-object: pink;
+            --color-private: #FF4500;
+            --color-protected: red;
+            --color-public: #FF7F50;
+            --color-static: #FF1493;
+            --color-this: #00BFFF;
+            --color-trait: #7B68EE;
+        }
+
+        /*cores span*/
+        span.color-let,
+        span.color-global,
+        span.color-php,
+        span.color-var,
+        span.color-class{
+            color: var(--color-class);
+        }
+        span.color-const{
+            color: var(--color-const);
+        }
+        span.color-console,
+        span.color-echo,
+            span.color-print{
+            color: var(--color-echo);
+        }
+        span.color-comentario,
+        span.color-varDump,
+        span.color-function{
+            color: var(--color-function);
+            font-weight: bold;
+        }
+        span.color-case,
+        span.color-default,
+        span.color-export,
+        span.color-from,
+        span.color-import,
+        span.color-new{
+            color: var(--color-new);
+        }
+        span.color-object{
+            color: var(--color-object);
+        }
+        span.color-break,
+        span.color-if,
+        span.color-else,
+        span.color-elseif,
+        span.color-head,
+        span.color-switch,
+        span.color-private,
+        span.color-while{
+            color: var(--color-private);
+        }
+        span.color-protected{
+            color: var(--color-protected);
+        }
+        span.color-public{
+            color: var(--color-public);
+        }
+        span.color-static{
+            color: var(--color-static);
+        }
+        span.color-body,
+        span.color-doctype,
+        span.color-html,
+        span.color-script,
+        span.color-this{
+            color: var(--color-this);
+        }
+        span.color-div,
+        span.color-for,
+        span.color-foreach,
+        span.color-return,
+        span.color-trait{
+            color: var(--color-trait);
+        }
+        /*fim cores span*/      
+
+        body {
+            background-color: var(--azul-claro);
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: 'Times New Roman', Times, serif;
+            line-height: 1.5;
+        }
+
+        p {
+            padding: 7px 0;
+            font-size: 20px;
+        }
+
+        #conteudo {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+
+        }
+
+        .section {
+            padding: 14px 0;
+        }
+
+        /*codigo*/
+        .codigo {
+            background-color: #232526;
+            color: #c9dfff;
+            padding: 7px;
+            border-radius: 7px;
+            font-size: 18px;
+            overflow-x: auto;
+        }
+
+        button.copyTexto{
+            float: right;
+            background: none;
+            border: none;
+            color: var(--azul-claro);
+            cursor: pointer;
+            font-size: 17px;
+        }
+        /*fim codigo*/
+
+        @media screen and (max-width: 800px) {
+            body {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 14px !important;
+            }
+
+            #section {
+                width: 100%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            h1 {
+                text-align: center;
+                font-size: 25px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <div id="conteudo">
+            <div id="header">
+                <header>
+                    <h1>Copiar contéudo para área de transferência</h1>
+                </header>
+            </div>
+
+            <div id="section">
+                <section class="section">                    
+                    <div class="codigo c1">
+                        <button class="copyTexto" onclick="copyC1()"><i class="fa-regular fa-copy"></i></button>
+                        <p>“Mas o que se gloriar, glorie-se nisto: em entender, e em me conhecer, que eu sou o Senhor, que faço benevolência, juízo e justiça na terra; porque destas coisas me agrado”, diz o Senhor. Jeremias 9.24</p>
+                    </div>   
+                </section>
+
+                <section class="section">
+                    <h2>Código que raliza a função copiar</h2>
+                    <div class="codigo c2">
+                        <button class="copyTexto" onclick="copyC2()"><i class="fa-regular fa-copy"></i></button>
+                        <span class="color-doctype">&lt;!DOCTYPE</span> <span class="color-html">html&gt;</span><br>
+                        <span class="color-html">&lt;html</span> lang="pt-br"&gt;<br>
+                        <span class="color-head">&lt;head&gt;</span><br>
+                        &nbsp;&nbsp;&lt;meta charset="UTF-8"&gt;<br>
+                        &nbsp;&nbsp;&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+                        &nbsp;&nbsp;&lt;title&gt;Copiar Texto&lt;/title&gt;<br>
+                        &nbsp;&nbsp;&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"&gt;<br>
+                        <span class="color-head">&lt;/head&gt;</span><br>
+                        <span class="color-body">&lt;body&gt;</span><br>
+                        &nbsp;&nbsp;<span class="color-div">&lt;div</span> class="codigo c1"&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="copyTexto" <span class="color-function">onclick="copyC1()"</span>&gt;&lt;i class="fa-regular fa-copy"&gt;&lt;/i&gt;&lt;/button&gt;<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;“Mas o que se gloriar, glorie-se nisto: em entender, e em me conhecer, que eu sou o Senhor, que faço benevolência, juízo e justiça na terra; porque destas coisas me agrado”, diz o Senhor. Jeremias 9.24&lt;/p&gt;<br>
+                        &nbsp;&nbsp;<span class="color-div">&lt;/div&gt;</span><br><br>
+                        
+                        &nbsp;&nbsp;<span class="color-script">&lt;script&gt;</span><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;/*copiar codigo*/<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<span class="color-function">function copyC1()</span> {<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="color-var">var</span> texto = document.querySelector(".c1");<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="color-var">var</span> selecionar = document.createRange();<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;selecionar.selectNodeContents(texto);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;window.getSelection().removeAllRanges();<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;window.getSelection().addRange(selecionar);<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;document.execCommand("copy");<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;window.getSelection().removeAllRanges();<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                        &nbsp;&nbsp;<span class="color-script">&lt;/script&gt;</span><br>
+                        &nbsp;&nbsp;
+                        <span class="color-body">&lt;/body&gt;</span><br>
+                        <span class="color-html">&lt;/html&gt;</span><br>
+                    </div>                    
+                </section>
+
+            </div> 
+        </div>
+    </main>
+
+    <script>
+        /*copiar codigo*/
+        function copyC1() {
+            var texto = document.querySelector(".c1");
+            var selecionar = document.createRange();
+            selecionar.selectNodeContents(texto);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(selecionar);
+            document.execCommand("copy");
+            window.getSelection().removeAllRanges();
+        }
+        function copyC2() {
+            var texto = document.querySelector(".c2");
+            var selecionar = document.createRange();
+            selecionar.selectNodeContents(texto);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(selecionar);
+            document.execCommand("copy");
+            window.getSelection().removeAllRanges();
+        }
+        /*fim copiar codigo*/
+    </script>
+    
+</body>
+</html>
