@@ -127,7 +127,7 @@
             </code>
         </div>
 
-        <h2>Subundo as para o Banco de Dados</h2>
+        <h2>Interagindo como o  Banco de Dados</h2>
 
         <p>Executar as migrations</p>
         
@@ -147,6 +147,7 @@
             </code>
         </div>
 
+        <h2>Criando Models</h2>
         <p>Criar a Models da página home do conteúdo do topo </p>
         
         <div class="code c10">
@@ -156,7 +157,8 @@
             </code>
         </div>
 
-        <h2>Adicionando Dados Inicais para Tabelas</h2>
+        <h2>Seeders</h2>
+        <p>Adicionando Dados Inicais para Tabelas</p>
 
         <p>Criar seeders</p>
         
@@ -200,24 +202,6 @@
             <code>
                 npx sequelize-cli db:seed:undo --seed nome-da-seed
                 <button class="copyTexto" onclick="copyCode('.c15')"><i class="fa-regular fa-copy"></i></button>
-            </code>
-        </div>
-
-        <p>Criar a Models da página contato do conteúdo texto </p>
-        
-        <div class="code c16">
-            <code>
-                npx sequelize-cli model:generate --name ContentsContacts --attributes titleContact:string,descContact:string,iconCompany:string,titleCompany:string,descCompany:string,iconAddress:string,titleAddress:string,descAddress:string,iconEmail:string,titleEmail:string,descEmail:string,titleForm:string
-                <button class="copyTexto" onclick="copyCode('.c16')"><i class="fa-regular fa-copy"></i></button>
-            </code>
-        </div>
-
-        <p>Criar seeders</p>
-        
-        <div class="code c17">
-            <code>
-                npx sequelize-cli seed:generate --name demo-contentscontacts
-                <button class="copyTexto" onclick="copyCode('.c17')"><i class="fa-regular fa-copy"></i></button>
             </code>
         </div>
     </main>    
