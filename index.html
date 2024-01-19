@@ -241,21 +241,23 @@
         /*copiar codigo*/
         function copyC1() {
             var texto = document.querySelector(".c1");
-            var selecionar = document.createRange();
-            selecionar.selectNodeContents(texto);
-            window.getSelection().removeAllRanges();
-            window.getSelection().addRange(selecionar);
-            document.execCommand("copy");
-            window.getSelection().removeAllRanges();
+            var conteudo = texto.textContent.trim().replace(/\s+/g, ' ');
+
+            navigator.clipboard.writeText(conteudo).then(function () {
+                console.log('Texto copiado com sucesso!');
+            }).catch(function (err) {
+                console.log('Erro ao copiar o texto: ', err);
+            });
         }
         function copyC2() {
             var texto = document.querySelector(".c2");
-            var selecionar = document.createRange();
-            selecionar.selectNodeContents(texto);
-            window.getSelection().removeAllRanges();
-            window.getSelection().addRange(selecionar);
-            document.execCommand("copy");
-            window.getSelection().removeAllRanges();
+            var conteudo = texto.textContent.trim().replace(/\s+/g, ' ');
+
+            navigator.clipboard.writeText(conteudo).then(function () {
+                console.log('Texto copiado com sucesso!');
+            }).catch(function (err) {
+                console.log('Erro ao copiar o texto: ', err);
+            });
         }
         /*fim copiar codigo*/
     </script>
